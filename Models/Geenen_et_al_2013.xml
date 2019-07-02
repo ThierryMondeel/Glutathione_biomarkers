@@ -1,0 +1,4471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by COPASI version 4.8 (Build 35) on 2012-05-29 16:29 with libSBML version 4.2.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="COPASI1" id="Model_1" name="Geenen100610">
+    <annotation>
+      <COPASI xmlns="http://www.copasi.org/static/sbml">
+        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="#COPASI1">
+            <dcterms:created>
+              <rdf:Description>
+                <dcterms:W3CDTF>2011-11-24T16:22:46Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:created>
+          </rdf:Description>
+        </rdf:RDF>
+      </COPASI>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="function_4_v1" name="function_4_v1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bglut </ci>
+            </bvar>
+            <bvar>
+              <ci> cglut </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kglutin </ci>
+            </bvar>
+            <bvar>
+              <ci> kmbglut </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> bglut </ci>
+                  <ci> kmbglut </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kglutin </ci>
+                  <ci> cglut </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v2" name="function_4_v2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bcys </ci>
+            </bvar>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kccysin </ci>
+            </bvar>
+            <bvar>
+              <ci> kcysin </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kcysin </ci>
+                  <ci> bcys </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kccysin </ci>
+                  <ci> ccys </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v3" name="function_4_v3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> OPA </ci>
+            </bvar>
+            <bvar>
+              <ci> bOPA </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> ktrsOPA </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> ktrsOPA </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <ci> bOPA </ci>
+                  </apply>
+                  <ci> OPA </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v4" name="function_4_v4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ASG </ci>
+            </bvar>
+            <bvar>
+              <ci> bASG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kcysASG </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kcysASG </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <ci> bASG </ci>
+                  </apply>
+                  <ci> ASG </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v5" name="function_4_v5">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> boxo </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> ktrsoxo </ci>
+            </bvar>
+            <bvar>
+              <ci> oxo </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> ktrsoxo </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <ci> boxo </ci>
+                  </apply>
+                  <ci> oxo </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v7" name="function_4_v7">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KprotAA </ci>
+            </bvar>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> met </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> KprotAA </ci>
+                <ci> ccys </ci>
+                <ci> met </ci>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v8" name="function_4_v8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bgly </ci>
+            </bvar>
+            <bvar>
+              <ci> cgly </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kcgly </ci>
+            </bvar>
+            <bvar>
+              <ci> kglyin </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> bgly </ci>
+                  <ci> kglyin </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kcgly </ci>
+                  <ci> cgly </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v9" name="function_4_v9">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> SAM </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kiMATiGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMATimet </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMatiSAM </ci>
+            </bvar>
+            <bvar>
+              <ci> met </ci>
+            </bvar>
+            <bvar>
+              <ci> vmMATi </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <cn> 66.71 </cn>
+                    <ci> kiMATiGSSG </ci>
+                  </apply>
+                  <ci> vmMATi </ci>
+                  <ci> met </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kmMATimet </ci>
+                  <apply>
+                    <plus/>
+                    <ci> kiMATiGSSG </ci>
+                    <ci> cGSSG </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> met </ci>
+                      <ci> kmMATimet </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> SAM </ci>
+                      <ci> kmMatiSAM </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v10" name="function_4_v10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> SAM </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kiMATiiiGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMATiiiSAM </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMATiiimet </ci>
+            </bvar>
+            <bvar>
+              <ci> kposSAM </ci>
+            </bvar>
+            <bvar>
+              <ci> met </ci>
+            </bvar>
+            <bvar>
+              <ci> vmMATiii </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <cn> 66.71 </cn>
+                    <ci> kiMATiiiGSSG </ci>
+                  </apply>
+                  <ci> vmMATiii </ci>
+                  <apply>
+                    <power/>
+                    <ci> met </ci>
+                    <cn> 1.21 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> kposSAM </ci>
+                        <apply>
+                          <power/>
+                          <ci> SAM </ci>
+                          <cn> 2 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> kmMATiiiSAM </ci>
+                        <apply>
+                          <power/>
+                          <ci> SAM </ci>
+                          <cn> 2 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kiMATiiiGSSG </ci>
+                    <ci> cGSSG </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> kmMATiiimet </ci>
+                    <apply>
+                      <power/>
+                      <ci> met </ci>
+                      <cn> 1.21 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v11" name="function_4_v11">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KmmethSAH </ci>
+            </bvar>
+            <bvar>
+              <ci> KmmethSAM </ci>
+            </bvar>
+            <bvar>
+              <ci> SAH </ci>
+            </bvar>
+            <bvar>
+              <ci> SAM </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmmeth </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vmmeth </ci>
+                  <ci> SAM </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> KmmethSAM </ci>
+                    <apply>
+                      <plus/>
+                      <cn> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> SAH </ci>
+                        <ci> KmmethSAH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> SAM </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v12" name="function_4_v12">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> SAH </ci>
+            </bvar>
+            <bvar>
+              <ci> SAM </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmmet </ci>
+            </bvar>
+            <bvar>
+              <ci> cgly </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGNMTSAH </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGNMTSAM </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGNMTcgly </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vmmet </ci>
+                  <ci> cgly </ci>
+                  <ci> SAM </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kmGNMTcgly </ci>
+                    <ci> cgly </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> SAH </ci>
+                      <ci> kmGNMTSAH </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> kmGNMTSAM </ci>
+                    <ci> SAM </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v13" name="function_4_v13">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KmahSAH </ci>
+            </bvar>
+            <bvar>
+              <ci> Kmahhcy </ci>
+            </bvar>
+            <bvar>
+              <ci> SAH </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmfah </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> hcy </ci>
+            </bvar>
+            <bvar>
+              <ci> keqmet </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vmfah </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> hcy </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqmet </ci>
+                        <ci> SAH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> SAH </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> KmahSAH </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> hcy </ci>
+                      <ci> Kmahhcy </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> SAH </ci>
+                      <ci> KmahSAH </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v14" name="function_4_v14">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> BET </ci>
+            </bvar>
+            <bvar>
+              <ci> Kmbhmtbet </ci>
+            </bvar>
+            <bvar>
+              <ci> Kmbhmthcy </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmbhmt </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> hcy </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> BET </ci>
+                  <ci> Vmbhmt </ci>
+                  <ci> hcy </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> BET </ci>
+                    <ci> Kmbhmtbet </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> Kmbhmthcy </ci>
+                    <ci> hcy </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v15" name="function_4_v15">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> H2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> H2O2ss </ci>
+            </bvar>
+            <bvar>
+              <ci> c5mTHFSUM </ci>
+            </bvar>
+            <bvar>
+              <ci> cCH2THF </ci>
+            </bvar>
+            <bvar>
+              <ci> cTHF </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> hcy </ci>
+            </bvar>
+            <bvar>
+              <ci> kiMSH2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMShcy </ci>
+            </bvar>
+            <bvar>
+              <ci> kmMSmTH4 </ci>
+            </bvar>
+            <bvar>
+              <ci> vmMS </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <minus/>
+                      <ci> c5mTHFSUM </ci>
+                      <ci> cCH2THF </ci>
+                    </apply>
+                    <ci> cTHF </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2ss </ci>
+                    <ci> kiMSH2O2 </ci>
+                  </apply>
+                  <ci> vmMS </ci>
+                  <ci> hcy </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2 </ci>
+                    <ci> kiMSH2O2 </ci>
+                  </apply>
+                  <ci> kmMShcy </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <minus/>
+                        <apply>
+                          <minus/>
+                          <ci> c5mTHFSUM </ci>
+                          <ci> cCH2THF </ci>
+                        </apply>
+                        <ci> cTHF </ci>
+                      </apply>
+                      <ci> kmMSmTH4 </ci>
+                    </apply>
+                  </apply>
+                  <ci> kmMSmTH4 </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> hcy </ci>
+                      <ci> kmMShcy </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v16" name="function_4_v16">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> H2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> H2O2ss </ci>
+            </bvar>
+            <bvar>
+              <ci> Kmcbshcy </ci>
+            </bvar>
+            <bvar>
+              <ci> Kmcbsserine </ci>
+            </bvar>
+            <bvar>
+              <ci> SAH </ci>
+            </bvar>
+            <bvar>
+              <ci> SAM </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmcbs </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> cser </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <bvar>
+              <ci> hcy </ci>
+            </bvar>
+            <bvar>
+              <ci> kaH2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> keqcbs </ci>
+            </bvar>
+            <bvar>
+              <ci> kmcbscyt </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <cn> 1.0016 </cn>
+                  <ci> cser </ci>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2 </ci>
+                    <ci> kaH2O2 </ci>
+                  </apply>
+                  <ci> Vmcbs </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cyt </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqcbs </ci>
+                        <ci> kmcbscyt </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> hcy </ci>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <plus/>
+                      <ci> SAH </ci>
+                      <ci> SAM </ci>
+                    </apply>
+                    <cn> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2ss </ci>
+                    <ci> kaH2O2 </ci>
+                  </apply>
+                  <ci> Kmcbshcy </ci>
+                  <ci> Kmcbsserine </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cser </ci>
+                      <ci> Kmcbsserine </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cyt </ci>
+                      <ci> kmcbscyt </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> hcy </ci>
+                      <ci> Kmcbshcy </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> cser </ci>
+                        <ci> hcy </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kmcbshcy </ci>
+                        <ci> Kmcbsserine </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI29" id="function_4_v17" name="function_4_v17">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI29">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:36:58Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <bvar>
+              <ci> kcglccys </ci>
+            </bvar>
+            <bvar>
+              <ci> keqctggcl </ci>
+            </bvar>
+            <bvar>
+              <ci> kmctglcyt </ci>
+            </bvar>
+            <bvar>
+              <ci> vmctgl </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vmctgl </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> ccys </ci>
+                      <apply>
+                        <times/>
+                        <ci> kcglccys </ci>
+                        <ci> keqctggcl </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> cyt </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kmctglcyt </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> ccys </ci>
+                      <ci> kcglccys </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cyt </ci>
+                      <ci> kmctglcyt </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI30" id="function_4_v18" name="function_4_v18">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI30">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T17:54:03Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> AB </ci>
+            </bvar>
+            <bvar>
+              <ci> BSO </ci>
+            </bvar>
+            <bvar>
+              <ci> bmet </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> cglc </ci>
+            </bvar>
+            <bvar>
+              <ci> cglut </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> gluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLccys </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLcglc </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLcglut </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLgluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> keqGCL </ci>
+            </bvar>
+            <bvar>
+              <ci> kiBSO </ci>
+            </bvar>
+            <bvar>
+              <ci> kiGCL </ci>
+            </bvar>
+            <bvar>
+              <ci> para </ci>
+            </bvar>
+            <bvar>
+              <ci> vGCLf1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <cn> 14.2722 </cn>
+                          <ci> bmet </ci>
+                          <ci> para </ci>
+                        </apply>
+                        <cn> 1000 </cn>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <plus/>
+                          <cn> 0.67994 </cn>
+                          <ci> bmet </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn> 20 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> para </ci>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> bmet </ci>
+                        <apply>
+                          <plus/>
+                          <cn> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <cn> 20 </cn>
+                              <ci> para </ci>
+                            </apply>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <plus/>
+                          <cn> 20 </cn>
+                          <ci> bmet </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn> 18.5433 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> para </ci>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> vGCLf1 </ci>
+                  <ci> ccys </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqGCL </ci>
+                        <ci> ccys </ci>
+                        <ci> cglut </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> cglut </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGCLccys </ci>
+                  <ci> kGCLcglut </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> AB </ci>
+                      <ci> kGCLAB </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ccys </ci>
+                      <ci> kGCLccys </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> BSO </ci>
+                      <ci> kiBSO </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <ci> kGCLcglc </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglut </ci>
+                      <ci> kGCLcglut </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kiGCL </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> gluAB </ci>
+                      <ci> kGCLgluAB </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI31" id="function_4_v19" name="function_4_v19">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI31">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-02-27T11:55:45Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> OPA </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> cglc </ci>
+            </bvar>
+            <bvar>
+              <ci> cgly </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> gluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGSOPA </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScglc </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScgly </ci>
+            </bvar>
+            <bvar>
+              <ci> kGSgluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> keqGS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> vGSf1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vGSf1 </ci>
+                  <ci> cglc </ci>
+                  <ci> cgly </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqGS1 </ci>
+                        <ci> cglc </ci>
+                        <ci> cgly </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGScglc </ci>
+                  <ci> kGScgly </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cgly </ci>
+                      <ci> kGScgly </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> gluAB </ci>
+                      <ci> kGSgluAB </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <ci> kGScglc </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kGScGSH </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> OPA </ci>
+                      <ci> kGSOPA </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v20" name="function_4_v20">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> H2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGPXH2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGPXgsh </ci>
+            </bvar>
+            <bvar>
+              <ci> vmGPX </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> H2O2 </ci>
+                  <ci> vmGPX </ci>
+                  <apply>
+                    <power/>
+                    <ci> cGSH </ci>
+                    <cn> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2 </ci>
+                    <apply>
+                      <times/>
+                      <cn> 9 </cn>
+                      <ci> kmGPXH2O2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <plus/>
+                      <ci> kmGPXgsh </ci>
+                      <ci> cGSH </ci>
+                    </apply>
+                    <cn> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v21" name="function_4_v21">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> cNADPH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmgrGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> kmgrNADPH </ci>
+            </bvar>
+            <bvar>
+              <ci> vmgr </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> cNADPH </ci>
+                  <ci> vmgr </ci>
+                  <ci> cGSSG </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kmgrGSSG </ci>
+                  <ci> kmgrNADPH </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cNADPH </ci>
+                      <ci> kmgrNADPH </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSSG </ci>
+                      <ci> kmgrGSSG </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> cNADPH </ci>
+                        <ci> cGSSG </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> kmgrGSSG </ci>
+                        <ci> kmgrNADPH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v22" name="function_4_v22">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> H2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> H2O2ss </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kaGSSGl </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGSSGl </ci>
+            </bvar>
+            <bvar>
+              <ci> vmGSSGl </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2 </ci>
+                    <ci> kaGSSGl </ci>
+                  </apply>
+                  <ci> vmGSSGl </ci>
+                  <ci> cGSSG </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2ss </ci>
+                    <ci> kaGSSGl </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> kmGSSGl </ci>
+                    <ci> cGSSG </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v23" name="function_4_v23">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> H2O2 </ci>
+            </bvar>
+            <bvar>
+              <ci> H2O2ss </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kaGSSGh </ci>
+            </bvar>
+            <bvar>
+              <ci> kmGSSGh </ci>
+            </bvar>
+            <bvar>
+              <ci> vmGSSGh </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2 </ci>
+                    <ci> kaGSSGh </ci>
+                  </apply>
+                  <ci> vmGSSGh </ci>
+                  <ci> cGSSG </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> H2O2ss </ci>
+                    <ci> kaGSSGh </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> kmGSSGh </ci>
+                    <ci> cGSSG </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v24" name="function_4_v24">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmgshoutl </ci>
+            </bvar>
+            <bvar>
+              <ci> vmgshoutl </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vmgshoutl </ci>
+                  <apply>
+                    <power/>
+                    <ci> cGSH </ci>
+                    <cn> 3 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> kmgshoutl </ci>
+                    <cn> 3 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> cGSH </ci>
+                    <cn> 3 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v25" name="function_4_v25">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmgshouth </ci>
+            </bvar>
+            <bvar>
+              <ci> vmgshouth </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vmgshouth </ci>
+                  <ci> cGSH </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> kmgshouth </ci>
+                  <ci> cGSH </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v26" name="function_4_v26">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> cglc </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCTAoxo </ci>
+            </bvar>
+            <bvar>
+              <ci> kcgctccys </ci>
+            </bvar>
+            <bvar>
+              <ci> kcgctcglc </ci>
+            </bvar>
+            <bvar>
+              <ci> kegGCTA </ci>
+            </bvar>
+            <bvar>
+              <ci> oxo </ci>
+            </bvar>
+            <bvar>
+              <ci> vGCTA </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vGCTA </ci>
+                  <ci> cglc </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> ccys </ci>
+                        <ci> oxo </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> kegGCTA </ci>
+                        <ci> cglc </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kcgctcglc </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> ccys </ci>
+                      <ci> kcgctccys </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <ci> kcgctcglc </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> oxo </ci>
+                      <ci> kGCTAoxo </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> ccys </ci>
+                        <ci> oxo </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> kcgctccys </ci>
+                        <ci> kGCTAoxo </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v27" name="function_4_v27">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cglut </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kopcglut </ci>
+            </bvar>
+            <bvar>
+              <ci> kopoxo </ci>
+            </bvar>
+            <bvar>
+              <ci> oxo </ci>
+            </bvar>
+            <bvar>
+              <ci> vop </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vop </ci>
+                  <ci> oxo </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kopoxo </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cglut </ci>
+                      <ci> kopcglut </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> oxo </ci>
+                      <ci> kopoxo </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI32" id="function_4_v28" name="function_4_v28">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI32">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-24T10:10:41Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> AB </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> ccys </ci>
+            </bvar>
+            <bvar>
+              <ci> cglc </ci>
+            </bvar>
+            <bvar>
+              <ci> cglut </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> gluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLccys </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLcglc </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLcglut </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCLgluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> keqGCL </ci>
+            </bvar>
+            <bvar>
+              <ci> kiGCL </ci>
+            </bvar>
+            <bvar>
+              <ci> vGCLf1 </ci>
+            </bvar>
+            <bvar>
+              <ci> bmet </ci>
+            </bvar>
+            <bvar>
+              <ci> para </ci>
+            </bvar>
+            <bvar>
+              <ci> BSO </ci>
+            </bvar>
+            <bvar>
+              <ci> kiBSO </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <cn> 14.2722 </cn>
+                          <ci> bmet </ci>
+                          <ci> para </ci>
+                        </apply>
+                        <cn> 1000 </cn>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <plus/>
+                          <cn> 0.67994 </cn>
+                          <ci> bmet </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn> 20 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> para </ci>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> bmet </ci>
+                        <apply>
+                          <plus/>
+                          <cn> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <cn> 20 </cn>
+                              <ci> para </ci>
+                            </apply>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <plus/>
+                          <cn> 20 </cn>
+                          <ci> bmet </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn> 18.5433 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> para </ci>
+                            <cn> 1000 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> AB </ci>
+                  <ci> vGCLf1 </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <cn> 1 </cn>
+                      <apply>
+                        <times/>
+                        <ci> keqGCL </ci>
+                        <ci> cglut </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> cglut </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGCLAB </ci>
+                  <ci> kGCLcglut </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> AB </ci>
+                      <ci> kGCLAB </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ccys </ci>
+                      <ci> kGCLccys </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> BSO </ci>
+                      <ci> kiBSO </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <ci> kGCLcglc </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglut </ci>
+                      <ci> kGCLcglut </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kiGCL </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> gluAB </ci>
+                      <ci> kGCLgluAB </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v29" name="function_4_v29">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> OPA </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> cglc </ci>
+            </bvar>
+            <bvar>
+              <ci> cgly </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> gluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> kGSOPA </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScglc </ci>
+            </bvar>
+            <bvar>
+              <ci> kGScgly </ci>
+            </bvar>
+            <bvar>
+              <ci> kGSgluAB </ci>
+            </bvar>
+            <bvar>
+              <ci> keqGS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> vGSf1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vGSf1 </ci>
+                  <ci> cgly </ci>
+                  <ci> gluAB </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> OPA </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqGS2 </ci>
+                        <ci> cgly </ci>
+                        <ci> gluAB </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGScglc </ci>
+                  <ci> kGScgly </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cgly </ci>
+                      <ci> kGScgly </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> gluAB </ci>
+                      <ci> kGSgluAB </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cglc </ci>
+                      <ci> kGScglc </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kGScGSH </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> OPA </ci>
+                      <ci> kGSOPA </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v30" name="function_4_v30">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> bgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> cysgly </ci>
+            </bvar>
+            <bvar>
+              <ci> kGGTbGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kGGTbgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> kGGTcysgly </ci>
+            </bvar>
+            <bvar>
+              <ci> keqGGT </ci>
+            </bvar>
+            <bvar>
+              <ci> vGGT </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vGGT </ci>
+                  <ci> bGSH </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> bgluAA </ci>
+                        <ci> cysgly </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> keqGGT </ci>
+                        <ci> bGSH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGGTbGSH </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> bgluAA </ci>
+                      <ci> kGGTbgluAA </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> bGSH </ci>
+                      <ci> kGGTbGSH </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cysgly </ci>
+                      <ci> kGGTcysgly </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> bgluAA </ci>
+                        <ci> cysgly </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> kGGTbgluAA </ci>
+                        <ci> kGGTcysgly </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v31" name="function_4_v31">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bcys </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> cysgly </ci>
+            </bvar>
+            <bvar>
+              <ci> kAPbcys </ci>
+            </bvar>
+            <bvar>
+              <ci> kAPcysgly </ci>
+            </bvar>
+            <bvar>
+              <ci> keqAP </ci>
+            </bvar>
+            <bvar>
+              <ci> vAP </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vAP </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> bcys </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqAP </ci>
+                        <ci> cysgly </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> cysgly </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kAPcysgly </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> bcys </ci>
+                      <ci> kAPbcys </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cysgly </ci>
+                      <ci> kAPcysgly </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v32" name="function_4_v32">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> cgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kTRSbgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> kTRScgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> keqTRS </ci>
+            </bvar>
+            <bvar>
+              <ci> vTRS </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vTRS </ci>
+                  <ci> bgluAA </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cgluAA </ci>
+                      <apply>
+                        <times/>
+                        <ci> keqTRS </ci>
+                        <ci> bgluAA </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kTRSbgluAA </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> bgluAA </ci>
+                      <ci> kTRSbgluAA </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cgluAA </ci>
+                      <ci> kTRScgluAA </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v33" name="function_4_v33">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCTAcgluAA </ci>
+            </bvar>
+            <bvar>
+              <ci> kGCTAoxo </ci>
+            </bvar>
+            <bvar>
+              <ci> kegGCTA </ci>
+            </bvar>
+            <bvar>
+              <ci> oxo </ci>
+            </bvar>
+            <bvar>
+              <ci> vGCTA </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> vGCTA </ci>
+                  <ci> cgluAA </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> oxo </ci>
+                      <apply>
+                        <times/>
+                        <ci> kegGCTA </ci>
+                        <ci> cgluAA </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kGCTAcgluAA </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cgluAA </ci>
+                      <ci> kGCTAcgluAA </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> oxo </ci>
+                      <ci> kGCTAoxo </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v34" name="function_4_v34">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ASG </ci>
+            </bvar>
+            <bvar>
+              <ci> VmP450E1 </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450E1ASG </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450E1cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450E1para </ci>
+            </bvar>
+            <bvar>
+              <ci> para </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> para </ci>
+                  <ci> VmP450E1 </ci>
+                  <ci> cGSH </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kP450E1cGSH </ci>
+                  <ci> kP450E1para </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> para </ci>
+                      <ci> kP450E1para </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ASG </ci>
+                      <ci> kP450E1ASG </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kP450E1cGSH </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v35" name="function_4_v35">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> ASG </ci>
+            </bvar>
+            <bvar>
+              <ci> VmP450A2 </ci>
+            </bvar>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450A2ASG </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450A2cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kP450A2para </ci>
+            </bvar>
+            <bvar>
+              <ci> para </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> para </ci>
+                  <ci> VmP450A2 </ci>
+                  <ci> cGSH </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kP450A2cGSH </ci>
+                  <ci> kP450A2para </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> para </ci>
+                      <ci> kP450A2para </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ASG </ci>
+                      <ci> kP450A2ASG </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cGSH </ci>
+                      <ci> kP450A2cGSH </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v36" name="function_4_v36">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bGSSG </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> vbGSSGexp </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> vbGSSGexp </ci>
+                <ci> bGSSG </ci>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_v39" name="function_4_v39">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cglut </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> gln </ci>
+            </bvar>
+            <bvar>
+              <ci> keqgln </ci>
+            </bvar>
+            <bvar>
+              <ci> kglngln </ci>
+            </bvar>
+            <bvar>
+              <ci> kglnglut </ci>
+            </bvar>
+            <bvar>
+              <ci> vgln </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> gln </ci>
+                  <ci> vgln </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> cglut </ci>
+                      <apply>
+                        <times/>
+                        <ci> gln </ci>
+                        <ci> keqgln </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kglngln </ci>
+                  <apply>
+                    <plus/>
+                    <cn> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> gln </ci>
+                      <ci> kglngln </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> cglut </ci>
+                      <ci> kglnglut </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI33" id="function_2" name="Rate Law for v37">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI33">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:23:22Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KprotDeg </ci>
+            </bvar>
+            <bvar>
+              <ci> prot </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> KprotDeg </ci>
+              <ci> prot </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI34" id="function_3" name="Rate Law for v38">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI34">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:26:13Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> kprotg </ci>
+            </bvar>
+            <bvar>
+              <ci> prot </ci>
+            </bvar>
+            <bvar>
+              <ci> kprotd </ci>
+            </bvar>
+            <bvar>
+              <ci> growthprot </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kprotg </ci>
+                <ci> prot </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kprotd </ci>
+                <ci> growthprot </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI35" id="function_4" name="reaction for v40">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI35">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-01-24T10:31:16Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> cGSH </ci>
+            </bvar>
+            <bvar>
+              <ci> kcGSHused </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cGSH </ci>
+              <ci> kcGSHused </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_1" name="function_4_v6 [1]">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> bmet </ci>
+            </bvar>
+            <bvar>
+              <ci> compartment </ci>
+            </bvar>
+            <bvar>
+              <ci> kmetin </ci>
+            </bvar>
+            <bvar>
+              <ci> kmetincmethionine </ci>
+            </bvar>
+            <bvar>
+              <ci> met </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> bmet </ci>
+                  <ci> kmetin </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kmetincmethionine </ci>
+                  <ci> met </ci>
+                </apply>
+              </apply>
+              <ci> compartment </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" scale="-6"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="compartment" name="compartment" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="ext" name="ext" compartment="compartment" initialConcentration="1" boundaryCondition="true" constant="true"/>
+      <species id="cglut" name="cglut" compartment="compartment" initialConcentration="916.091"/>
+      <species id="bcys" name="bcys" compartment="compartment" initialConcentration="26.0692"/>
+      <species id="ccys" name="ccys" compartment="compartment" initialConcentration="0.001"/>
+      <species id="OPA" name="OPA" compartment="compartment" initialConcentration="0.337721"/>
+      <species id="bOPA" name="bOPA" compartment="compartment" initialConcentration="0" boundaryCondition="true" constant="true"/>
+      <species id="ASG" name="ASG" compartment="compartment" initialConcentration="0"/>
+      <species id="bASG" name="bASG" compartment="compartment" initialConcentration="0" boundaryCondition="true" constant="true"/>
+      <species id="oxo" name="oxo" compartment="compartment" initialConcentration="841.168"/>
+      <species id="boxo" name="boxo" compartment="compartment" initialConcentration="0" boundaryCondition="true" constant="true"/>
+      <species id="bmet" name="bmet" compartment="compartment" initialConcentration="13" boundaryCondition="true" constant="true"/>
+      <species id="met" name="met" compartment="compartment" initialConcentration="316.159"/>
+      <species id="cgly" name="cgly" compartment="compartment" initialConcentration="963.217"/>
+      <species id="SAM" name="SAM" compartment="compartment" initialConcentration="158.076"/>
+      <species id="SAH" name="SAH" compartment="compartment" initialConcentration="9.86438"/>
+      <species id="hcy" name="hcy" compartment="compartment" initialConcentration="0.419005"/>
+      <species id="cyt" name="cyt" compartment="compartment" initialConcentration="273.724"/>
+      <species id="cglc" name="cglc" compartment="compartment" initialConcentration="48.7178"/>
+      <species id="cGSH" name="cGSH" compartment="compartment" initialConcentration="4629.74"/>
+      <species id="cGSSG" name="cGSSG" compartment="compartment" initialConcentration="49.9271"/>
+      <species id="bGSSG" name="bGSSG" compartment="compartment" initialConcentration="0.00239865"/>
+      <species id="bGSH" name="bGSH" compartment="compartment" initialConcentration="0.0169222"/>
+      <species id="gluAB" name="gluAB" compartment="compartment" initialConcentration="0.470752"/>
+      <species id="bgluAA" name="bgluAA" compartment="compartment" initialConcentration="9.26966"/>
+      <species id="cysgly" name="cysgly" compartment="compartment" initialConcentration="0.191073"/>
+      <species id="cgluAA" name="cgluAA" compartment="compartment" initialConcentration="34.9713"/>
+      <species id="growthprot" name="growthprot" compartment="compartment" initialConcentration="3292" boundaryCondition="true" constant="true"/>
+      <species id="gln" name="gln" compartment="compartment" initialConcentration="1015" boundaryCondition="true" constant="true"/>
+      <species id="species_1" name="prot" compartment="compartment" initialConcentration="3292"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="AB" name="AB" value="5"/>
+      <parameter id="BET" name="BET" value="50"/>
+      <parameter id="bglut" name="bglut" value="2.5"/>
+      <parameter id="bgly" name="bgly" value="200"/>
+      <parameter id="BSO" name="BSO" value="0"/>
+      <parameter id="c5mTHFSUM" name="c5mTHFSUM" value="13.3739"/>
+      <parameter id="cCH2THF" name="cCH2THF" value="0.674"/>
+      <parameter id="cNADPH" name="cNADPH" value="50"/>
+      <parameter id="cser" name="cser" value="540"/>
+      <parameter id="cTHF" name="cTHF" value="8.2"/>
+      <parameter id="cys" name="cys" value="0.1"/>
+      <parameter id="EXTERNAL" name="EXTERNAL" value="0"/>
+      <parameter id="H2O2" name="H2O2" value="0.01"/>
+      <parameter id="H2O2ss" name="H2O2ss" value="0.01"/>
+      <parameter id="kaGSSGh" name="kaGSSGh" value="0.01"/>
+      <parameter id="kaGSSGl" name="kaGSSGl" value="0.01"/>
+      <parameter id="kaH2O2" name="kaH2O2" value="0.035"/>
+      <parameter id="kAPbcys" name="kAPbcys" value="13899"/>
+      <parameter id="kAPcysgly" name="kAPcysgly" value="2500"/>
+      <parameter id="kbcys" name="kbcys" value="0.0101613"/>
+      <parameter id="kccysin" name="kccysin" value="2.05187"/>
+      <parameter id="kcgctccys" name="kcgctccys" value="300"/>
+      <parameter id="kcgctcglc" name="kcgctcglc" value="7.58868"/>
+      <parameter id="kcglccys" name="kcglccys" value="37"/>
+      <parameter id="kcgly" name="kcgly" value="3.13574"/>
+      <parameter id="kcysASG" name="kcysASG" value="4.59173"/>
+      <parameter id="kcysin" name="kcysin" value="22.6156"/>
+      <parameter id="kcysinbcys" name="kcysinbcys" value="2100"/>
+      <parameter id="kegGCTA" name="kegGCTA" value="4440.48"/>
+      <parameter id="keqAP" name="keqAP" value="136.913"/>
+      <parameter id="keqcbs" name="keqcbs" value="3.3"/>
+      <parameter id="keqctggcl" name="keqctggcl" value="8.04309"/>
+      <parameter id="keqgcl" name="keqgcl" value="5597"/>
+      <parameter id="keqGCL" name="keqGCL" value="0.0221726"/>
+      <parameter id="keqGGT" name="keqGGT" value="127.066"/>
+      <parameter id="keqgln" name="keqgln" value="1"/>
+      <parameter id="keqGS1" name="keqGS1" value="0.30988"/>
+      <parameter id="keqGS2" name="keqGS2" value="0.305673"/>
+      <parameter id="keqmet" name="keqmet" value="0.0602"/>
+      <parameter id="keqTRS" name="keqTRS" value="13.8755"/>
+      <parameter id="kGCLAB" name="kGCLAB" value="2300"/>
+      <parameter id="kGCLccys" name="kGCLccys" value="100"/>
+      <parameter id="kGCLcglc" name="kGCLcglc" value="300"/>
+      <parameter id="kGCLcglut" name="kGCLcglut" value="1900"/>
+      <parameter id="kGCLgluAB" name="kGCLgluAB" value="10000"/>
+      <parameter id="kGCTAcgluAA" name="kGCTAcgluAA" value="2200"/>
+      <parameter id="kGCTAoxo" name="kGCTAoxo" value="13944.8"/>
+      <parameter id="kGGTbgluAA" name="kGGTbgluAA" value="1383.59"/>
+      <parameter id="kGGTbGSH" name="kGGTbGSH" value="670"/>
+      <parameter id="kGGTcysgly" name="kGGTcysgly" value="1090"/>
+      <parameter id="kglngln" name="kglngln" value="2500"/>
+      <parameter id="kglnglut" name="kglnglut" value="2600"/>
+      <parameter id="kglutin" name="kglutin" value="0"/>
+      <parameter id="kglyin" name="kglyin" value="17.0015"/>
+      <parameter id="kGScglc" name="kGScglc" value="22"/>
+      <parameter id="kGScgly" name="kGScgly" value="300"/>
+      <parameter id="kGScGSH" name="kGScGSH" value="300"/>
+      <parameter id="kGSgluAB" name="kGSgluAB" value="200"/>
+      <parameter id="kGSOPA" name="kGSOPA" value="100"/>
+      <parameter id="KibhmtH2O2" name="KibhmtH2O2" value="0.01"/>
+      <parameter id="kiBSO" name="kiBSO" value="1.3"/>
+      <parameter id="kiGCL" name="kiGCL" value="8600"/>
+      <parameter id="kiMATiGSSG" name="kiMATiGSSG" value="2140"/>
+      <parameter id="kiMATiiiGSSG" name="kiMATiiiGSSG" value="4030"/>
+      <parameter id="kiMSH2O2" name="kiMSH2O2" value="0.01"/>
+      <parameter id="Kmahhcy" name="Kmahhcy" value="150"/>
+      <parameter id="KmahSAH" name="KmahSAH" value="6.5"/>
+      <parameter id="kmbglut" name="kmbglut" value="37.5"/>
+      <parameter id="kmbgly" name="kmbgly" value="150"/>
+      <parameter id="Kmbhmtbet" name="Kmbhmtbet" value="100"/>
+      <parameter id="Kmbhmthcy" name="Kmbhmthcy" value="12"/>
+      <parameter id="kmcbscyt" name="kmcbscyt" value="83"/>
+      <parameter id="Kmcbshcy" name="Kmcbshcy" value="1000"/>
+      <parameter id="Kmcbsserine" name="Kmcbsserine" value="2000"/>
+      <parameter id="kmctglcyt" name="kmctglcyt" value="500"/>
+      <parameter id="kmetin" name="kmetin" value="120"/>
+      <parameter id="kmetincmethionine" name="kmetincmethionine" value="4.5"/>
+      <parameter id="kmGNMTcgly" name="kmGNMTcgly" value="130"/>
+      <parameter id="kmGNMTSAH" name="kmGNMTSAH" value="18"/>
+      <parameter id="kmGNMTSAM" name="kmGNMTSAM" value="32"/>
+      <parameter id="kmGPXgsh" name="kmGPXgsh" value="1330"/>
+      <parameter id="kmGPXH2O2" name="kmGPXH2O2" value="0.01"/>
+      <parameter id="kmgrGSSG" name="kmgrGSSG" value="107"/>
+      <parameter id="kmgrNADPH" name="kmgrNADPH" value="10.4"/>
+      <parameter id="kmgshouth" name="kmgshouth" value="150"/>
+      <parameter id="kmgshoutl" name="kmgshoutl" value="3000"/>
+      <parameter id="kmGSSGh" name="kmGSSGh" value="1250"/>
+      <parameter id="kmGSSGl" name="kmGSSGl" value="7110"/>
+      <parameter id="kmMATiiimet" name="kmMATiiimet" value="300"/>
+      <parameter id="kmMATiiiSAM" name="kmMATiiiSAM" value="129600"/>
+      <parameter id="kmMATimet" name="kmMATimet" value="25"/>
+      <parameter id="kmMatiSAM" name="kmMatiSAM" value="41"/>
+      <parameter id="KmmethSAH" name="KmmethSAH" value="20000"/>
+      <parameter id="KmmethSAM" name="KmmethSAM" value="1.4"/>
+      <parameter id="kmmetinoutmethionine" name="kmmetinoutmethionine" value="150"/>
+      <parameter id="kmMShcy" name="kmMShcy" value="1"/>
+      <parameter id="kmMSmTH4" name="kmMSmTH4" value="25"/>
+      <parameter id="kopcglut" name="kopcglut" value="0.0414048"/>
+      <parameter id="kopoxo" name="kopoxo" value="267.681"/>
+      <parameter id="kP450A2ASG" name="kP450A2ASG" value="10000"/>
+      <parameter id="kP450A2cGSH" name="kP450A2cGSH" value="270"/>
+      <parameter id="kP450A2para" name="kP450A2para" value="1300"/>
+      <parameter id="kP450E1ASG" name="kP450E1ASG" value="10000"/>
+      <parameter id="kP450E1cGSH" name="kP450E1cGSH" value="270"/>
+      <parameter id="kP450E1para" name="kP450E1para" value="6500"/>
+      <parameter id="kparagene" name="kparagene" value="1"/>
+      <parameter id="kposSAM" name="kposSAM" value="1e-005"/>
+      <parameter id="KprotAA" name="KprotAA" value="0.00224"/>
+      <parameter id="kprotd" name="kprotd" value="0.01"/>
+      <parameter id="KprotDeg" name="KprotDeg" value="4"/>
+      <parameter id="kprotg" name="kprotg" value="0.0336938"/>
+      <parameter id="Kprotmc" name="Kprotmc" value="0.15"/>
+      <parameter id="kTRSbgluAA" name="kTRSbgluAA" value="1000"/>
+      <parameter id="kTRScgluAA" name="kTRScgluAA" value="1000"/>
+      <parameter id="ktrsOPA" name="ktrsOPA" value="2.23"/>
+      <parameter metaid="COPASI2" id="ktrsoxo" name="ktrsoxo" value="0.309085">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI2">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-01-24T11:12:12Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </parameter>
+      <parameter metaid="COPASI3" id="para" name="para" value="0">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI3">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-19T14:13:01Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </parameter>
+      <parameter metaid="COPASI4" id="vAP" name="vAP" value="145394">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI4">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-25T11:33:17Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </parameter>
+      <parameter id="vbGSSGexp" name="vbGSSGexp" value="0.700317"/>
+      <parameter id="vGCLf1" name="vGCLf1" value="2527"/>
+      <parameter id="vGCTA" name="vGCTA" value="5982.77"/>
+      <parameter id="vGGT" name="vGGT" value="8745.33"/>
+      <parameter id="vgln" name="vgln" value="81600"/>
+      <parameter id="vGSf1" name="vGSf1" value="2568"/>
+      <parameter id="Vmbhmt" name="Vmbhmt" value="24675"/>
+      <parameter id="Vmcbs" name="Vmcbs" value="464416"/>
+      <parameter id="vmctgl" name="vmctgl" value="16106.2"/>
+      <parameter id="vmcysin" name="vmcysin" value="1382.04"/>
+      <parameter id="Vmfah" name="Vmfah" value="1500"/>
+      <parameter id="vmglyin" name="vmglyin" value="320.993"/>
+      <parameter id="vmGPX" name="vmGPX" value="188.583"/>
+      <parameter id="vmgr" name="vmgr" value="28.7148"/>
+      <parameter id="vmgshouth" name="vmgshouth" value="88.888"/>
+      <parameter id="vmgshoutl" name="vmgshoutl" value="2.27711"/>
+      <parameter id="vmGSSGh" name="vmGSSGh" value="21.6676"/>
+      <parameter id="vmGSSGl" name="vmGSSGl" value="428.154"/>
+      <parameter id="vmMATi" name="vmMATi" value="1000"/>
+      <parameter id="vmMATiii" name="vmMATiii" value="300"/>
+      <parameter id="Vmmet" name="Vmmet" value="597.928"/>
+      <parameter id="Vmmeth" name="Vmmeth" value="1500"/>
+      <parameter id="vmmetin" name="vmmetin" value="823.545"/>
+      <parameter id="vmMS" name="vmMS" value="309.754"/>
+      <parameter id="VmP450A2" name="VmP450A2" value="0.00253731"/>
+      <parameter id="VmP450E1" name="VmP450E1" value="254.593"/>
+      <parameter id="vop" name="vop" value="858269"/>
+      <parameter id="vTRS" name="vTRS" value="13598"/>
+      <parameter id="parameter_1" name="quantity_1" value="0"/>
+      <parameter id="parameter_2" name="quantity_2" value="0"/>
+      <parameter id="parameter_3" name="quantity_3" value="0"/>
+      <parameter id="parameter_4" name="quantity_4" value="0"/>
+      <parameter id="parameter_5" name="quantity_5" value="0"/>
+      <parameter id="parameter_6" name="quantity_6" value="0"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="v1" name="v1">
+        <listOfReactants>
+          <speciesReference species="ext" stoichiometry="0.00044"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cglut"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v1 </ci>
+                <ci> bglut </ci>
+                <ci> cglut </ci>
+                <ci> compartment </ci>
+                <ci> kglutin </ci>
+                <ci> kmbglut </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI5" id="v2" name="v2">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI5">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:34:47Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="bcys" stoichiometry="0.00044"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ccys"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v2 </ci>
+                <ci> bcys </ci>
+                <ci> ccys </ci>
+                <ci> compartment </ci>
+                <ci> kccysin </ci>
+                <ci> kcysin </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI6" id="v3" name="v3">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI6">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-01-24T11:19:42Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="OPA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bOPA" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v3 </ci>
+                <ci> OPA </ci>
+                <ci> bOPA </ci>
+                <ci> compartment </ci>
+                <ci> ktrsOPA </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI7" id="v4" name="v4">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI7">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-24T16:48:40Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ASG"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bASG" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v4 </ci>
+                <ci> ASG </ci>
+                <ci> bASG </ci>
+                <ci> compartment </ci>
+                <ci> kcysASG </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI8" id="v5" name="v5">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI8">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:40:54Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="oxo"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="boxo" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v5 </ci>
+                <ci> boxo </ci>
+                <ci> compartment </ci>
+                <ci> ktrsoxo </ci>
+                <ci> oxo </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI9" id="v6" name="v6">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI9">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T11:33:03Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="bmet" stoichiometry="0.00044"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="met"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> bmet </ci>
+                <ci> compartment </ci>
+                <ci> kmetin </ci>
+                <ci> kmetincmethionine </ci>
+                <ci> met </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI10" id="v7" name="v7">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI10">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:36:20Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ccys" stoichiometry="0.92"/>
+          <speciesReference species="cglut" stoichiometry="2.4"/>
+          <speciesReference species="met"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="species_1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v7 </ci>
+                <ci> KprotAA </ci>
+                <ci> ccys </ci>
+                <ci> compartment </ci>
+                <ci> met </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="KprotAA" name="KprotAA" value="0.002236"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI11" id="v8" name="v8">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI11">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:36:31Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ext" stoichiometry="0.00044"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cgly"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v8 </ci>
+                <ci> bgly </ci>
+                <ci> cgly </ci>
+                <ci> compartment </ci>
+                <ci> kcgly </ci>
+                <ci> kglyin </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI12" id="v9" name="v9">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI12">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:42:40Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="met"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SAM"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cGSSG"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v9 </ci>
+                <ci> SAM </ci>
+                <ci> cGSSG </ci>
+                <ci> compartment </ci>
+                <ci> kiMATiGSSG </ci>
+                <ci> kmMATimet </ci>
+                <ci> kmMatiSAM </ci>
+                <ci> met </ci>
+                <ci> vmMATi </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v10" name="v10">
+        <listOfReactants>
+          <speciesReference species="met"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SAM"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cGSSG"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v10 </ci>
+                <ci> SAM </ci>
+                <ci> cGSSG </ci>
+                <ci> compartment </ci>
+                <ci> kiMATiiiGSSG </ci>
+                <ci> kmMATiiiSAM </ci>
+                <ci> kmMATiiimet </ci>
+                <ci> kposSAM </ci>
+                <ci> met </ci>
+                <ci> vmMATiii </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v11" name="v11">
+        <listOfReactants>
+          <speciesReference species="SAM"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SAH"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v11 </ci>
+                <ci> KmmethSAH </ci>
+                <ci> KmmethSAM </ci>
+                <ci> SAH </ci>
+                <ci> SAM </ci>
+                <ci> Vmmeth </ci>
+                <ci> compartment </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v12" name="v12">
+        <listOfReactants>
+          <speciesReference species="cgly"/>
+          <speciesReference species="SAM"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SAH"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v12 </ci>
+                <ci> SAH </ci>
+                <ci> SAM </ci>
+                <ci> Vmmet </ci>
+                <ci> cgly </ci>
+                <ci> compartment </ci>
+                <ci> kmGNMTSAH </ci>
+                <ci> kmGNMTSAM </ci>
+                <ci> kmGNMTcgly </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v13" name="v13">
+        <listOfReactants>
+          <speciesReference species="SAH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="hcy"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v13 </ci>
+                <ci> KmahSAH </ci>
+                <ci> Kmahhcy </ci>
+                <ci> SAH </ci>
+                <ci> Vmfah </ci>
+                <ci> compartment </ci>
+                <ci> hcy </ci>
+                <ci> keqmet </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v14" name="v14">
+        <listOfReactants>
+          <speciesReference species="hcy"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="met"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v14 </ci>
+                <ci> BET </ci>
+                <ci> Kmbhmtbet </ci>
+                <ci> Kmbhmthcy </ci>
+                <ci> Vmbhmt </ci>
+                <ci> compartment </ci>
+                <ci> hcy </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v15" name="v15">
+        <listOfReactants>
+          <speciesReference species="hcy"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="met"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v15 </ci>
+                <ci> H2O2 </ci>
+                <ci> H2O2ss </ci>
+                <ci> c5mTHFSUM </ci>
+                <ci> cCH2THF </ci>
+                <ci> cTHF </ci>
+                <ci> compartment </ci>
+                <ci> hcy </ci>
+                <ci> kiMSH2O2 </ci>
+                <ci> kmMShcy </ci>
+                <ci> kmMSmTH4 </ci>
+                <ci> vmMS </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI13" id="v16" name="v16">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI13">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:35:10Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="hcy"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cyt"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="SAH"/>
+          <modifierSpeciesReference species="SAM"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v16 </ci>
+                <ci> H2O2 </ci>
+                <ci> H2O2ss </ci>
+                <ci> Kmcbshcy </ci>
+                <ci> Kmcbsserine </ci>
+                <ci> SAH </ci>
+                <ci> SAM </ci>
+                <ci> Vmcbs </ci>
+                <ci> compartment </ci>
+                <ci> cser </ci>
+                <ci> cyt </ci>
+                <ci> hcy </ci>
+                <ci> kaH2O2 </ci>
+                <ci> keqcbs </ci>
+                <ci> kmcbscyt </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI14" id="v17" name="v17">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI14">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:34:34Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cyt"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ccys"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v17 </ci>
+                <ci> ccys </ci>
+                <ci> compartment </ci>
+                <ci> cyt </ci>
+                <ci> kcglccys </ci>
+                <ci> keqctggcl </ci>
+                <ci> kmctglcyt </ci>
+                <ci> vmctgl </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI15" id="v18" name="v18">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI15">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:35:33Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ccys"/>
+          <speciesReference species="cglut"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cglc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="bmet"/>
+          <modifierSpeciesReference species="cGSH"/>
+          <modifierSpeciesReference species="gluAB"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v18 </ci>
+                <ci> AB </ci>
+                <ci> BSO </ci>
+                <ci> bmet </ci>
+                <ci> cGSH </ci>
+                <ci> ccys </ci>
+                <ci> cglc </ci>
+                <ci> cglut </ci>
+                <ci> compartment </ci>
+                <ci> gluAB </ci>
+                <ci> kGCLAB </ci>
+                <ci> kGCLccys </ci>
+                <ci> kGCLcglc </ci>
+                <ci> kGCLcglut </ci>
+                <ci> kGCLgluAB </ci>
+                <ci> keqGCL </ci>
+                <ci> kiBSO </ci>
+                <ci> kiGCL </ci>
+                <ci> para </ci>
+                <ci> vGCLf1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI16" id="v19" name="v19">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI16">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:35:41Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cglc"/>
+          <speciesReference species="cgly"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cGSH"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="gluAB"/>
+          <modifierSpeciesReference species="OPA"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v19 </ci>
+                <ci> OPA </ci>
+                <ci> cGSH </ci>
+                <ci> cglc </ci>
+                <ci> cgly </ci>
+                <ci> compartment </ci>
+                <ci> gluAB </ci>
+                <ci> kGSOPA </ci>
+                <ci> kGScGSH </ci>
+                <ci> kGScglc </ci>
+                <ci> kGScgly </ci>
+                <ci> kGSgluAB </ci>
+                <ci> keqGS1 </ci>
+                <ci> vGSf1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v20" name="v20">
+        <listOfReactants>
+          <speciesReference species="cGSH" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cGSSG"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v20 </ci>
+                <ci> H2O2 </ci>
+                <ci> cGSH </ci>
+                <ci> compartment </ci>
+                <ci> kmGPXH2O2 </ci>
+                <ci> kmGPXgsh </ci>
+                <ci> vmGPX </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v21" name="v21">
+        <listOfReactants>
+          <speciesReference species="cGSSG"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cGSH" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v21 </ci>
+                <ci> cGSSG </ci>
+                <ci> cNADPH </ci>
+                <ci> compartment </ci>
+                <ci> kmgrGSSG </ci>
+                <ci> kmgrNADPH </ci>
+                <ci> vmgr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v22" name="v22">
+        <listOfReactants>
+          <speciesReference species="cGSSG"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bGSSG" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v22 </ci>
+                <ci> H2O2 </ci>
+                <ci> H2O2ss </ci>
+                <ci> cGSSG </ci>
+                <ci> compartment </ci>
+                <ci> kaGSSGl </ci>
+                <ci> kmGSSGl </ci>
+                <ci> vmGSSGl </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v23" name="v23">
+        <listOfReactants>
+          <speciesReference species="cGSSG"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bGSSG" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v23 </ci>
+                <ci> H2O2 </ci>
+                <ci> H2O2ss </ci>
+                <ci> cGSSG </ci>
+                <ci> compartment </ci>
+                <ci> kaGSSGh </ci>
+                <ci> kmGSSGh </ci>
+                <ci> vmGSSGh </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI17" id="v24" name="v24">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI17">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-24T17:07:50Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cGSH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bGSH" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v24 </ci>
+                <ci> cGSH </ci>
+                <ci> compartment </ci>
+                <ci> kmgshoutl </ci>
+                <ci> vmgshoutl </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v25" name="v25">
+        <listOfReactants>
+          <speciesReference species="cGSH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bGSH" stoichiometry="0.00044"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v25 </ci>
+                <ci> cGSH </ci>
+                <ci> compartment </ci>
+                <ci> kmgshouth </ci>
+                <ci> vmgshouth </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI18" id="v26" name="v26">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI18">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T11:34:15Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cglc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ccys"/>
+          <speciesReference species="oxo"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v26 </ci>
+                <ci> ccys </ci>
+                <ci> cglc </ci>
+                <ci> compartment </ci>
+                <ci> kGCTAoxo </ci>
+                <ci> kcgctccys </ci>
+                <ci> kcgctcglc </ci>
+                <ci> kegGCTA </ci>
+                <ci> oxo </ci>
+                <ci> vGCTA </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI19" id="v27" name="v27">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI19">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-25T11:19:10Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="oxo"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cglut"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v27 </ci>
+                <ci> cglut </ci>
+                <ci> compartment </ci>
+                <ci> kopcglut </ci>
+                <ci> kopoxo </ci>
+                <ci> oxo </ci>
+                <ci> vop </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI20" id="v28" name="v28">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI20">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-25T11:19:12Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cglut"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="gluAB"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cGSH"/>
+          <modifierSpeciesReference species="ccys"/>
+          <modifierSpeciesReference species="cglc"/>
+          <modifierSpeciesReference species="bmet"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v28 </ci>
+                <ci> AB </ci>
+                <ci> cGSH </ci>
+                <ci> ccys </ci>
+                <ci> cglc </ci>
+                <ci> cglut </ci>
+                <ci> compartment </ci>
+                <ci> gluAB </ci>
+                <ci> kGCLAB </ci>
+                <ci> kGCLccys </ci>
+                <ci> kGScglc </ci>
+                <ci> kGCLcglut </ci>
+                <ci> kGCLgluAB </ci>
+                <ci> keqGCL </ci>
+                <ci> kiGCL </ci>
+                <ci> vGCLf1 </ci>
+                <ci> bmet </ci>
+                <ci> para </ci>
+                <ci> BSO </ci>
+                <ci> kiBSO </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI21" id="v29" name="v29">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI21">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T10:02:46Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cgly"/>
+          <speciesReference species="gluAB"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OPA"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cglc"/>
+          <modifierSpeciesReference species="cGSH"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v29 </ci>
+                <ci> OPA </ci>
+                <ci> cGSH </ci>
+                <ci> cglc </ci>
+                <ci> cgly </ci>
+                <ci> compartment </ci>
+                <ci> gluAB </ci>
+                <ci> kGSOPA </ci>
+                <ci> kGScGSH </ci>
+                <ci> kGScglc </ci>
+                <ci> kGScgly </ci>
+                <ci> kGSgluAB </ci>
+                <ci> keqGS2 </ci>
+                <ci> vGSf1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v30" name="v30">
+        <listOfReactants>
+          <speciesReference species="bGSH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bgluAA"/>
+          <speciesReference species="cysgly"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v30 </ci>
+                <ci> bGSH </ci>
+                <ci> bgluAA </ci>
+                <ci> compartment </ci>
+                <ci> cysgly </ci>
+                <ci> kGGTbGSH </ci>
+                <ci> kGGTbgluAA </ci>
+                <ci> kGGTcysgly </ci>
+                <ci> keqGGT </ci>
+                <ci> vGGT </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v31" name="v31">
+        <listOfReactants>
+          <speciesReference species="cysgly"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bcys"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v31 </ci>
+                <ci> bcys </ci>
+                <ci> compartment </ci>
+                <ci> cysgly </ci>
+                <ci> kAPbcys </ci>
+                <ci> kAPcysgly </ci>
+                <ci> keqAP </ci>
+                <ci> vAP </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v32" name="v32">
+        <listOfReactants>
+          <speciesReference species="bgluAA" stoichiometry="0.00044"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cgluAA"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v32 </ci>
+                <ci> bgluAA </ci>
+                <ci> cgluAA </ci>
+                <ci> compartment </ci>
+                <ci> kTRSbgluAA </ci>
+                <ci> kTRScgluAA </ci>
+                <ci> keqTRS </ci>
+                <ci> vTRS </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v33" name="v33">
+        <listOfReactants>
+          <speciesReference species="cgluAA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="oxo"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v33 </ci>
+                <ci> cgluAA </ci>
+                <ci> compartment </ci>
+                <ci> kGCTAcgluAA </ci>
+                <ci> kGCTAoxo </ci>
+                <ci> kegGCTA </ci>
+                <ci> oxo </ci>
+                <ci> vGCTA </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI22" id="v34" name="v34">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI22">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-05-24T11:54:44Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cGSH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ASG"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v34 </ci>
+                <ci> ASG </ci>
+                <ci> VmP450E1 </ci>
+                <ci> cGSH </ci>
+                <ci> compartment </ci>
+                <ci> kP450E1ASG </ci>
+                <ci> kP450E1cGSH </ci>
+                <ci> kP450E1para </ci>
+                <ci> para </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI23" id="v35" name="v35">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI23">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:39:07Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cGSH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ASG"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v35 </ci>
+                <ci> ASG </ci>
+                <ci> VmP450A2 </ci>
+                <ci> cGSH </ci>
+                <ci> compartment </ci>
+                <ci> kP450A2ASG </ci>
+                <ci> kP450A2cGSH </ci>
+                <ci> kP450A2para </ci>
+                <ci> para </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI24" id="v36" name="v36">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI24">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-12-12T09:39:08Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="bGSSG"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bcys" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v36 </ci>
+                <ci> bGSSG </ci>
+                <ci> compartment </ci>
+                <ci> vbGSSGexp </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI25" id="v37" name="v37">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI25">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:23:03Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="species_1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ccys" stoichiometry="0.92"/>
+          <speciesReference species="cglut" stoichiometry="2.4"/>
+          <speciesReference species="met"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_2 </ci>
+                <ci> KprotDeg </ci>
+                <ci> species_1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="KprotDeg" name="KprotDeg" value="0.0406"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI26" id="v38" name="v38">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI26">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:22:59Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="species_1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="growthprot"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_3 </ci>
+                <ci> kprotg </ci>
+                <ci> species_1 </ci>
+                <ci> kprotd </ci>
+                <ci> growthprot </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="kprotg" name="kprotg" value="0.0336938"/>
+            <parameter id="kprotd" name="kprotd" value="0.01"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI27" id="v39" name="v39">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI27">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2011-11-24T16:27:04Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="gln"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="cglut"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4_v39 </ci>
+                <ci> cglut </ci>
+                <ci> compartment </ci>
+                <ci> gln </ci>
+                <ci> keqgln </ci>
+                <ci> kglngln </ci>
+                <ci> kglnglut </ci>
+                <ci> vgln </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI28" id="reaction_1" name="v40" reversible="false">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI28">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2012-01-24T10:10:28Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="cGSH"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> cGSH </ci>
+                <ci> kcGSHused </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="kcGSHused" name="kcGSHused" value="0.02"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

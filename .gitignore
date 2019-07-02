@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+
+*.ipynb_ch*
+__pycache__
+*.pyc
+
+*.DS_Store
+*.Rhistory
+*.ai
+*.pptx
+*.xlsx
+*.pdf
