@@ -5,7 +5,7 @@
 "name":"ASG",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"32639"
+"obo.chebi":"CHEBI/32639"
 }
 },
 {
@@ -18,7 +18,7 @@
 "name":"SAH",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"16680"
+"obo.chebi":"CHEBI/16680"
 }
 },
 {
@@ -26,7 +26,7 @@
 "name":"SAM",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"15414"
+"obo.chebi":"CHEBI/15414"
 }
 },
 {
@@ -34,7 +34,7 @@
 "name":"bGSH",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"16856"
+"obo.chebi":"CHEBI/16856"
 }
 },
 {
@@ -42,7 +42,7 @@
 "name":"bGSSG",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"17858"
+"obo.chebi":"CHEBI/17858"
 }
 },
 {
@@ -50,7 +50,7 @@
 "name":"bcys",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"15356"
+"obo.chebi":"CHEBI/15356"
 }
 },
 {
@@ -63,7 +63,7 @@
 "name":"cCH2THF",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"20502"
+"obo.chebi":"CHEBI/20502"
 }
 },
 {
@@ -71,7 +71,7 @@
 "name":"cGSH",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"16856"
+"obo.chebi":"CHEBI/16856"
 }
 },
 {
@@ -79,7 +79,7 @@
 "name":"cGSSG",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"17858"
+"obo.chebi":"CHEBI/17858"
 }
 },
 {
@@ -87,7 +87,7 @@
 "name":"cTHF",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"20506"
+"obo.chebi":"CHEBI/20506"
 }
 },
 {
@@ -95,7 +95,7 @@
 "name":"ccys",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"15356"
+"obo.chebi":"CHEBI/15356"
 }
 },
 {
@@ -103,7 +103,7 @@
 "name":"cglc",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"17515"
+"obo.chebi":"CHEBI/17515"
 }
 },
 {
@@ -116,7 +116,7 @@
 "name":"cglut",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"14321"
+"obo.chebi":"CHEBI/14321"
 }
 },
 {
@@ -124,7 +124,7 @@
 "name":"cgly",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"15428"
+"obo.chebi":"CHEBI/15428"
 }
 },
 {
@@ -132,7 +132,7 @@
 "name":"cysASG",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"24337"
+"obo.chebi":"CHEBI/24337"
 }
 },
 {
@@ -140,7 +140,7 @@
 "name":"cysgly",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"4047"
+"obo.chebi":"CHEBI/4047"
 }
 },
 {
@@ -148,7 +148,7 @@
 "name":"cyt",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"17755"
+"obo.chebi":"CHEBI/17755"
 }
 },
 {
@@ -161,7 +161,7 @@
 "name":"glyASG",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"24337"
+"obo.chebi":"CHEBI/24337"
 }
 },
 {
@@ -169,7 +169,7 @@
 "name":"hcy",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"17230"
+"obo.chebi":"CHEBI/17230"
 }
 },
 {
@@ -177,7 +177,7 @@
 "name":"met",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"16811"
+"obo.chebi":"CHEBI/16811"
 }
 },
 {
@@ -185,7 +185,7 @@
 "name":"oxo",
 "compartment":"default_compartment",
 "annotation":{
-"obo.chebi:CHEBI":"16010"
+"obo.chebi":"CHEBI/16010"
 }
 },
 {

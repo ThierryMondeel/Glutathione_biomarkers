@@ -23,12 +23,12 @@ svg.escher-svg .label {
   cursor: default;
 }
 svg.escher-svg .reaction-label {
-  font-size: 35px; /* This used to be 30px */
+  font-size: 45px; /* This used to be 30px */
   fill: rgb(32, 32, 120);
   text-rendering: optimizelegibility;
 }
 svg.escher-svg .node-label {
-  font-size: 35px; /* This used to be 20px */
+  font-size: 40px; /* This used to be 20px */
 }
 svg.escher-svg .gene-label {
   font-size: 18px;
